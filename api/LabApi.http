@@ -1,0 +1,4 @@
+@LabApi_HostAddress = http://localhost:5287
+
+GET {{LabApi_HostAddress}}/api/v1/weather/forecasts?latitude=50.85&longitude=4.35&days=7&ensembleMembers=10000
+Accept: application/json
