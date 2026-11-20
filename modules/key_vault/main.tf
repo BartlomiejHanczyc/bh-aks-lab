@@ -33,4 +33,8 @@ resource "azurerm_key_vault" "main_keyvault" {
             "Get",
          ]
     }
+
+    tags = {
+      env_name = var.env_name
+    }
 }

@@ -62,3 +62,12 @@ module "compute" {
   env_name            = "dev"
   acr_name            = "bhazureakslabacr"
 }
+
+module "key_vault" {
+  source = "../../modules/key_vault"
+
+  name = "main-key-vault"
+  resource_group_name = "rg-key-vault-main"
+  location = "BelgiumCentral"
+  env_name = "dev"
+}
