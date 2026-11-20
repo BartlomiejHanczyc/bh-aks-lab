@@ -23,6 +23,12 @@ resource "azurerm_kubernetes_cluster" "compute-main" {
     type = "SystemAssigned"
   }
 
+  network_profile {
+    network_plugin = "azure"
+    network_plugin_mode = "overlay"
+    pod_cidr = "10.244.0.0/16"
+  }
+
   tags = {
     Environment = var.env_name
   }
