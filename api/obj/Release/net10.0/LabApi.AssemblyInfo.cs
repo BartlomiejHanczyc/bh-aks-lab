@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LabApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84ce1f434f28f3bd31310a62927931d019b3bedb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89f60be6eebfdcf57617a254c114a0dbb5ceb75e")]
 [assembly: System.Reflection.AssemblyProductAttribute("LabApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LabApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
