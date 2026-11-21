@@ -1,0 +1,9 @@
+C:\repos\bh-aks-lab\api\obj\Release\net10.0\PubTmp\Out\LabApi.exe
+C:\repos\bh-aks-lab\api\obj\Release\net10.0\PubTmp\Out\appsettings.Development.json
+C:\repos\bh-aks-lab\api\obj\Release\net10.0\PubTmp\Out\appsettings.json
+C:\repos\bh-aks-lab\api\obj\Release\net10.0\PubTmp\Out\LabApi.dll
+C:\repos\bh-aks-lab\api\obj\Release\net10.0\PubTmp\Out\LabApi.deps.json
+C:\repos\bh-aks-lab\api\obj\Release\net10.0\PubTmp\Out\LabApi.runtimeconfig.json
+C:\repos\bh-aks-lab\api\obj\Release\net10.0\PubTmp\Out\LabApi.pdb
+C:\repos\bh-aks-lab\api\obj\Release\net10.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
+C:\repos\bh-aks-lab\api\obj\Release\net10.0\PubTmp\Out\Microsoft.OpenApi.dll

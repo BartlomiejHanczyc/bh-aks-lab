@@ -1,29 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "/home/bart/azure-lab/api/LabApi.csproj": {}
+    "C:\\repos\\bh-aks-lab\\api\\LabApi.csproj": {}
   },
   "projects": {
-    "/home/bart/azure-lab/api/LabApi.csproj": {
+    "C:\\repos\\bh-aks-lab\\api\\LabApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/bart/azure-lab/api/LabApi.csproj",
+        "projectUniqueName": "C:\\repos\\bh-aks-lab\\api\\LabApi.csproj",
         "projectName": "LabApi",
-        "projectPath": "/home/bart/azure-lab/api/LabApi.csproj",
-        "packagesPath": "/root/.nuget/packages/",
-        "outputPath": "/home/bart/azure-lab/api/obj/",
+        "projectPath": "C:\\repos\\bh-aks-lab\\api\\LabApi.csproj",
+        "packagesPath": "C:\\Users\\Bart\\.nuget\\packages\\",
+        "outputPath": "C:\\repos\\bh-aks-lab\\api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Bart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -38,10 +45,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "11.0.100"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
@@ -60,20 +68,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[10.0.12, 10.0.12]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.arch-x64",
-              "version": "[10.0.12, 10.0.12]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[10.0.12, 10.0.12]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -82,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.112/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\11.0.100/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
