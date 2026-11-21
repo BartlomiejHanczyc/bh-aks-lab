@@ -2,8 +2,8 @@
 <!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\repos\bh-aks-lab\api\bin\release\publish\</_PublishTargetUrl>
-    <History>True|2026-11-21T21:46:02.5038044Z||;</History>
+    <_PublishTargetUrl>C:\repos\bh-aks-lab\api\bin\Release\net10.0\publish\</_PublishTargetUrl>
+    <History>True|2026-11-21T22:04:45.0166743Z||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

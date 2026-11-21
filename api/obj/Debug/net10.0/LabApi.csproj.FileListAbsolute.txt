@@ -1,5 +1,6 @@
 C:\repos\bh-aks-lab\api\bin\Debug\net10.0\appsettings.Development.json
 C:\repos\bh-aks-lab\api\bin\Debug\net10.0\appsettings.json
+C:\repos\bh-aks-lab\api\bin\Debug\net10.0\dotnet-tools.json
 C:\repos\bh-aks-lab\api\bin\Debug\net10.0\LabApi.staticwebassets.runtime.json
 C:\repos\bh-aks-lab\api\bin\Debug\net10.0\LabApi.staticwebassets.endpoints.json
 C:\repos\bh-aks-lab\api\bin\Debug\net10.0\LabApi.exe
@@ -31,7 +32,7 @@ C:\repos\bh-aks-lab\api\obj\Debug\net10.0\jsmodules\jsmodules.build.manifest.jso
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\scopedcss\scopedcss.cache
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\scopedcss\bundle\LabApi.styles.css
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\compressed\21eywcjvzv-{0}-tchfgznwy8-tchfgznwy8.gz
-C:\repos\bh-aks-lab\api\obj\Debug\net10.0\compressed\trzhtec8js-{0}-abqrnzwbin-abqrnzwbin.gz
+C:\repos\bh-aks-lab\api\obj\Debug\net10.0\compressed\trzhtec8js-{0}-ve326v555b-ve326v555b.gz
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\compressed\bgewwaffua-{0}-v1vy2to33n-v1vy2to33n.gz
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\compressed\4kyo8t4me9-{0}-ysew0n4kjn-ysew0n4kjn.gz
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\staticwebassets.build.json
@@ -39,7 +40,6 @@ C:\repos\bh-aks-lab\api\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\staticwebassets.development.json
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\swae.build.ex.cache
-C:\repos\bh-aks-lab\api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\LabApi.csproj.Up2Date
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\LabApi.dll
 C:\repos\bh-aks-lab\api\obj\Debug\net10.0\refint\LabApi.dll
