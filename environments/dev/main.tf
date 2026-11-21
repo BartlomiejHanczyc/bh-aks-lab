@@ -14,6 +14,10 @@ resource "azurerm_resource_provider_registration" "container_registry" {
   name = "Microsoft.ContainerRegistry"
 }
 
+resource "azurerm_resource_provider_registration" "key_vault" {
+  name = "Microsoft.KeyVault"
+}
+
 module "networking" {
   source = "../../modules/networking"
 
@@ -66,7 +70,7 @@ module "compute" {
 module "key_vault" {
   source = "../../modules/key_vault"
 
-  name = "main-key-vault"
+  name = "bhakslabmainkeyvault"
   resource_group_name = "rg-key-vault-main"
   location = "BelgiumCentral"
   env_name = "dev"
