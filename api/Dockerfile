@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:10.0
 
 WORKDIR /app
 
-COPY bin/release/publish/ .
+COPY bin/release/net10.0/publish/ .
 
 ENV ASPNETCORE_HTTP_PORTS=8080
 
