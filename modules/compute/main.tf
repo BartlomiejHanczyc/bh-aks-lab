@@ -39,12 +39,13 @@ resource "azurerm_container_registry" "acr" {
   resource_group_name = azurerm_resource_group.rg-compute.name
   location = azurerm_resource_group.rg-compute.location
   sku = "Standard"
+  role_assignment_mode = "AbacRepositoryPermissions"
   admin_enabled = false
 }
 
 resource "azurerm_role_assignment" "cluster-to-azr" {
   principal_id = azurerm_kubernetes_cluster.compute-main.kubelet_identity[0].object_id
-  role_definition_name = "AcrPull"
+  role_definition_name = "Container Registry Repository Reader"
   scope = azurerm_container_registry.acr.id
   skip_service_principal_aad_check = true
 }
