@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "0+WBM7JudSA=",
+  "success": false,
+  "projectFilePath": "/home/bart/azure-lab/api/LabApi.csproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/microsoft.aspnetcore.openapi/10.0.12/microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.openapi/2.12.0/microsoft.openapi.2.12.0.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.netcore.app.ref/10.0.12/microsoft.netcore.app.ref.10.0.12.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.12/microsoft.aspnetcore.app.ref.10.0.12.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.NETCore.App.Host.arch-x64. No packages exist with this id in source(s): nuget.org",
+      "projectPath": "/home/bart/azure-lab/api/LabApi.csproj",
+      "filePath": "/home/bart/azure-lab/api/LabApi.csproj",
+      "libraryId": "Microsoft.NETCore.App.Host.arch-x64",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
