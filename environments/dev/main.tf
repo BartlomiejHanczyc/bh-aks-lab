@@ -48,8 +48,8 @@ module "database" {
   env_name            = "dev"
   location            = "BelgiumCentral"
 
-  azuread_admin_username  = "bartlomiej.hanczyc_gmail.com#EXT#@bartlomiejhanczycgmail.onmicrosoft.com"
-  azuread_admin_object_id = "5d7c73fe-b672-48aa-addd-0d65c8e4038c"
+  azuread_admin_username  = var.sql_admin_login
+  azuread_admin_object_id = data.azurerm_client_config.current.object_id
 
   databases = {
     sql-db-main = {

@@ -1,18 +1,18 @@
 resource "azurerm_resource_group" "rg-compute" {
-  name = var.resource_group_name
+  name     = var.resource_group_name
   location = var.location
 }
 
 resource "azurerm_kubernetes_cluster" "compute-main" {
-  name = var.cluster_name
-  location = azurerm_resource_group.rg-compute.location
+  name                = var.cluster_name
+  location            = azurerm_resource_group.rg-compute.location
   resource_group_name = azurerm_resource_group.rg-compute.name
-  dns_prefix = "kube-main"
+  dns_prefix          = "kube-main"
 
   default_node_pool {
-    name = "default"
+    name       = "default"
     node_count = 1
-    vm_size = "Standard_D2_v2"
+    vm_size    = "Standard_D2_v2"
   }
 
   node_provisioning_profile {
@@ -24,9 +24,9 @@ resource "azurerm_kubernetes_cluster" "compute-main" {
   }
 
   network_profile {
-    network_plugin = "azure"
+    network_plugin      = "azure"
     network_plugin_mode = "overlay"
-    pod_cidr = "10.244.0.0/16"
+    pod_cidr            = "10.244.0.0/16"
   }
 
   tags = {
@@ -35,17 +35,17 @@ resource "azurerm_kubernetes_cluster" "compute-main" {
 }
 
 resource "azurerm_container_registry" "acr" {
-  name = var.acr_name
-  resource_group_name = azurerm_resource_group.rg-compute.name
-  location = azurerm_resource_group.rg-compute.location
-  sku = "Standard"
+  name                 = var.acr_name
+  resource_group_name  = azurerm_resource_group.rg-compute.name
+  location             = azurerm_resource_group.rg-compute.location
+  sku                  = "Standard"
   role_assignment_mode = "AbacRepositoryPermissions"
-  admin_enabled = false
+  admin_enabled        = false
 }
 
 resource "azurerm_role_assignment" "cluster-to-azr" {
-  principal_id = azurerm_kubernetes_cluster.compute-main.kubelet_identity[0].object_id
-  role_definition_name = "Container Registry Repository Reader"
-  scope = azurerm_container_registry.acr.id
+  principal_id                     = azurerm_kubernetes_cluster.compute-main.kubelet_identity[0].object_id
+  role_definition_name             = "Container Registry Repository Reader"
+  scope                            = azurerm_container_registry.acr.id
   skip_service_principal_aad_check = true
 }
