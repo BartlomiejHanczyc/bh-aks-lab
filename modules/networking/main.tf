@@ -42,7 +42,7 @@ resource "azurerm_dns_a_record" "api_gateway" {
 }
 
 resource "azapi_update_resource" "aks_gateway_api" {
-    type = "Microsoft.ContainerService/managedClusters@2025-10-01"
+    type = "Microsoft.ContainerService/managedClusters@2026-09-01"
     resource_id = var.aks_cluster_id
 
     body = {
@@ -52,6 +52,7 @@ resource "azapi_update_resource" "aks_gateway_api" {
           installation = "Standard"
         },
         webAppRouting = {
+          enabled = true
           gatewayAPIImplementations = {
             appRoutingIstio = {
               mode = "Enabled"
@@ -61,36 +62,6 @@ resource "azapi_update_resource" "aks_gateway_api" {
         }
       }
     }
-}
-
-resource "kubernetes_manifest" "api_gateway" {
-  manifest = {
-    apiVersion = "gateway.networking.k8s.io/v1"
-    kind = "Gateway"
-
-    metadata = {
-      name = "api-gateway"
-      namespace = "aks-lab"
-    }
-
-    spec = {
-      gatewayClassName = "approuting-istio"
-
-      listeners = [
-        {
-          name = "http"
-          protocol = "HTTP"
-          port = "80"
-
-          allowedRoutes = {
-            namespaces = {
-              from = "All"
-            }
-          }
-        }
-      ]
-    }
-  }
-
-  depends_on = [azapi_update_resource.aks_gateway_api]
+    
+    response_export_values = ["properties.ingressProfile"]
 }
