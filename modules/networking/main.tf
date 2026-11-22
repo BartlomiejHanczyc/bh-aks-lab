@@ -28,6 +28,19 @@ resource "azurerm_subnet" "vnet_subnet" {
   address_prefixes = each.value.address_prefixes
 }
 
+resource "azurerm_dns_zone" "aks" {
+  name = "bhazureakslab.com"
+  resource_group_name = azurerm_resource_group.vnet-rg.name
+}
+
+resource "azurerm_dns_a_record" "api_gateway" {
+  name = "api"
+  zone_name = azurerm_dns_zone.aks.name
+  resource_group_name = azurerm_resource_group.vnet-rg.name
+  ttl = 300
+  records = ["9.160.150.238"]
+}
+
 resource "azapi_update_resource" "aks_gateway_api" {
     type = "Microsoft.ContainerService/managedClusters@2025-10-01"
     resource_id = var.aks_cluster_id
