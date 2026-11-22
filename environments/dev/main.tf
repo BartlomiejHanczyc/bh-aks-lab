@@ -31,6 +31,7 @@ module "networking" {
 
   address_space = ["10.0.0.0/16"]
 
+  // Placeholder for future DNS
   dns_servers = ["10.0.0.4"]
 
   aks_cluster_id = module.compute.aks_cluster_id
