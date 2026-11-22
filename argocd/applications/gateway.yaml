@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/bartlomiej-hanczyc/bh-aks-lab.git
+    repoURL: https://github.com/bartlomiej-hanczyc/bh-aks-lab
     targetRevision: main
     path: argocd/resources/gateway
 
