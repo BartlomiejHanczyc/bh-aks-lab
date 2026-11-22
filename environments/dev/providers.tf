@@ -38,22 +38,6 @@ provider "azurerm" {
 
 provider "azapi" {}
 
-provider "kubernetes" {
-  host = module.compute.aks_host
-
-  cluster_ca_certificate = base64decode(
-    module.compute.cluster_ca_certificate
-  )
-
-  client_certificate = base64decode(
-    module.compute.client_certificate
-  )
-
-  client_key = base64decode(
-    module.compute.client_key
-  )
-}
-
 provider "helm" {
   kubernetes = {
     host = module.compute.aks_host

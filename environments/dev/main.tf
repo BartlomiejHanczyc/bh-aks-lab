@@ -18,6 +18,8 @@ resource "azurerm_resource_provider_registration" "key_vault" {
   name = "Microsoft.KeyVault"
 }
 
+data "azurerm_client_config" "current" {}
+
 module "networking" {
   source = "../../modules/networking"
 
