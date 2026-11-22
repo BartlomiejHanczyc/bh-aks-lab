@@ -31,6 +31,8 @@ module "networking" {
 
   dns_servers = ["10.0.0.4"]
 
+  aks_cluster_id = module.compute.aks_cluster_id
+
   subnets = {
     dev-main = {
       address_prefixes = ["10.0.1.0/24"]
@@ -70,8 +72,8 @@ module "compute" {
 module "key_vault" {
   source = "../../modules/key_vault"
 
-  name = "bhakslabmainkeyvault"
+  name                = "bhakslabmainkeyvault"
   resource_group_name = "rg-key-vault-main"
-  location = "BelgiumCentral"
-  env_name = "dev"
+  location            = "BelgiumCentral"
+  env_name            = "dev"
 }

@@ -17,7 +17,7 @@ The foundational infrastructure is in place:
 - [x] Terraform infrastructure
 - [x] Kubernetes cluster
 - [x] Azure SQL Database
-- [ ] .NET API deployment
+- [x] .NET API deployment
 - [ ] Angular frontend deployment
 - [ ] Auto-scaling configuration
 - [ ] ArgoCD integration
