@@ -2,7 +2,8 @@
 
 A personal DevOps lab project focused on building and running a scalable, cloud-native application infrastructure on Azure.
 
-The planned architecture consists of:
+The architecture consists of:
+- **Infrastructure:** Provisioned and managed using Terraform, split into modules, with remote state in Azure Storage.
 - **Orchestration:** AKS cluster with Azure CNI Overlay networking.
 - **Backend:** .NET 10 Web API, packaged as a Helm chart and running as a non-root container.
 - **Routing:** Kubernetes Gateway API through the AKS application routing add-on.
@@ -32,9 +33,7 @@ The foundational infrastructure is in place:
 - [ ] CI pipeline with GitHub Actions
 - [ ] Angular frontend deployment
 
-This lab is an ongoing project to explore Kubernetes, Infrastructure as Code, GitOps, cloud-native application deployment, and observability in an Azure environment.
-
-# Running It
+## Running It
 
 Requires Azure CLI, Terraform, kubectl and Docker, plus an existing storage account for the Terraform state (configured in `environments/dev/providers.tf`).
 
@@ -49,7 +48,7 @@ terraform apply
 
 az acr login --name bhazureakslabacr
 docker build -t bhazureakslabacr.azurecr.io/labapi:1.2 ../../api
-docker push <bhazureakslabacr.azurecr.io/labapi:1.2
+docker push bhazureakslabacr.azurecr.io/labapi:1.2
 
 az aks get-credentials --resource-group rg-compute-main --name main-cluster
 kubectl apply -f ../../argocd/bootstrap/root.yaml
