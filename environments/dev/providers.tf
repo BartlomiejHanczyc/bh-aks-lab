@@ -9,6 +9,11 @@ terraform {
       source  = "Azure/azapi"
       version = "~> 2.0"
     }
+
+    helm = {
+      source = "hashicorp/helm"
+      version = "~> 3.0"
+    }
   }
 
   backend "azurerm" {
@@ -49,4 +54,24 @@ provider "kubernetes" {
   client_key = base64decode(
     module.compute.client_key
   )
+}
+
+provider "helm" {
+  kubernetes = {
+    host = base64decode(
+      module.compute.aks_host
+    )
+
+    client_certificate = base64decode(
+      module.compute.client_certificate
+    )
+
+    client_key = base64decode(
+      module.compute.client_key
+    )
+
+    cluster_ca_certificate = base64decode(
+      module.compute.cluster_ca_certificate
+    )
+  }
 }
