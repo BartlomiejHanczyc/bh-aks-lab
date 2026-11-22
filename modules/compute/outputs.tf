@@ -21,3 +21,8 @@ output "aks_host" {
 output "aks_cluster_id" {
   value = azurerm_kubernetes_cluster.compute-main.id
 }
+
+output "client_key" {
+  value = azurerm_kubernetes_cluster.compute-main.kube_config[0].client_key
+  sensitive = true
+}

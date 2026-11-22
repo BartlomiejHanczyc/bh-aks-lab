@@ -45,4 +45,8 @@ provider "kubernetes" {
   client_certificate = base64decode(
     module.compute.client_certificate
   )
+
+  client_key = base64decode(
+    module.compute.client_key
+  )
 }

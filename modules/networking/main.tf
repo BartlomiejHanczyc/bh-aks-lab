@@ -29,12 +29,13 @@ resource "azurerm_subnet" "vnet_subnet" {
 }
 
 resource "azapi_update_resource" "aks_gateway_api" {
-    type = "Microsoft.ContainerService/managedClusters@25-10-01"
+    type = "Microsoft.ContainerService/managedClusters@2025-10-01"
     resource_id = var.aks_cluster_id
 
     body = {
       properties = {
-        gatewayAPI = {
+        ingressProfile = {
+          gatewayAPI = {
           installation = "Standard"
         },
         webAppRouting = {
@@ -43,6 +44,7 @@ resource "azapi_update_resource" "aks_gateway_api" {
               mode = "Enabled"
             }
           }
+        }
         }
       }
     }
@@ -60,21 +62,21 @@ resource "kubernetes_manifest" "api_gateway" {
 
     spec = {
       gatewayClassName = "approuting-istio"
-    }
 
-    listeners = [
-      {
-        name = "http"
-        protocol = "HTTP"
-        port = "80"
+      listeners = [
+        {
+          name = "http"
+          protocol = "HTTP"
+          port = "80"
 
-        allowedRoutes = {
-          namespaces = {
-            from = "All"
+          allowedRoutes = {
+            namespaces = {
+              from = "All"
+            }
           }
         }
-      }
-    ]
+      ]
+    }
   }
 
   depends_on = [azapi_update_resource.aks_gateway_api]
