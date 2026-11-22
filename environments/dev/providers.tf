@@ -42,14 +42,7 @@ provider "kubernetes" {
     module.compute.cluster_ca_certificate
   )
 
-  exec {
-    api_version = "client.authentication.k8s.io/v1"
-    command     = "kubelogin"
-
-    args = [
-      "get-token",
-      "--login",
-      "azurecli"
-    ]
-  }
+  client_certificate = base64decode(
+    module.compute.client_certificate
+  )
 }
