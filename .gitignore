@@ -1,2 +1,21 @@
-# Terraform
 .terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+bin/
+obj/
+.vs/
+*.user
+*.suo
+helm/**/charts/*.tgz
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
