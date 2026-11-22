@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/bartlomiej-hanczyc/bh-aks-lab
+    repoURL: https://github.com/bartlomiejHanczyc/bh-aks-lab
     targetRevision: main
     path: helm/api
 
